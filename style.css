@@ -14,7 +14,18 @@ a {
 .container {
   width: 70%;
   margin: auto;
-  overflow: auto;
+}
+
+#imageContainer {
+  height: 450px;
+}
+
+#heading {
+  margin-top: 50px;
+  text-align: center;
+}
+#gallery {
+  margin-top: 50px;
 }
 
 header {
@@ -61,6 +72,41 @@ section {
   padding: 20px 0;
   overflow: hidden;
 }
+
+.overlay {
+  display: none;
+  background: #245FAC url("image/magnify.png") no-repeat 50% 25%;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  padding-top: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  pointer-events: none;
+  text-align: center;
+}
+
+.overlay h3, p {
+  color: #fff;
+  position: relative;
+  top: 35%;
+}
+
+
+.overlay h3 {
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.overlayImage {
+  z-index: 2;
+}
+
 
 .tagline {
   background: tomato;
@@ -111,4 +157,62 @@ footer {
 
 footer p {
   padding-top: 20px;
+}
+
+@media (max-width: 1366px) {
+  html, body {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    width: 100%;
+  }
+  .logo {
+    margin-top: 0;
+  }
+  .logo, nav {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul, nav li  {
+    display: inline-block;
+    float: none;
+    padding: 0px;
+  }
+
+  nav li {
+    margin-bottom: 15px;
+  }
+
+  #gallery li {
+    width: 48%;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 568px) {
+  #gallery li {
+    width: 100%;
+    margin-right: 0;
+  }
+  header > div.container {
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+  }
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  footer p {
+    padding-top: 5px;
+  }
 }

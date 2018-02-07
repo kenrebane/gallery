@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 
   var category = "all-projects";
@@ -38,5 +40,36 @@ $(document).ready(function() {
     return false;
   });
 
+  $("#gallery li").on("mouseenter", function() {
+    // Get data attribute value
+    var title = $(this).data("title"),
+        description = $(this).data("desc");
+
+    //Validation
+    if ( title === null || title === "" || title === undefined ) {
+      title = "";
+    }
+
+    if ( description === null || description === "" ||
+         description === undefined ) {
+           description = "Click to enlarge";
+    }
+
+    //Creating overlay div
+    $(this).append("<div class='overlay'></div>");
+
+
+    //Get overlay div
+    var overlay = $(".overlay");
+
+    //Add html to overlay
+    overlay.html("<h3>"+title+"</h3><p>"+description+"</p>")
+      .fadeIn("normal");
+
+  });
+
+  $("#gallery li").on("mouseleave", function() {
+    $(".overlay").fadeOut("slow").remove("div.overlay");
+  });
 
 });
