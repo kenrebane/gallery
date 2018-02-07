@@ -68,13 +68,14 @@ section {
 
 .tagline > .container h1, p, p > small {
   color: #fff;
+  text-align: center;
 }
 
 .images {
   background: #23518C;
 }
 
-.images h1 {
+.images h1 span {
   font-size: 22px;
   color: #fff;
 }

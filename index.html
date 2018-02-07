@@ -3,6 +3,8 @@
     <title>Bikez | Get your custom bikes...</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="fancybox/dist/jquery.fancybox.min.css" />
+    <script src="jquery.js"></script>
+
   </head>
   <body>
 
@@ -28,21 +30,23 @@
 
     <section class="images">
       <div class="container">
-        <h1 id="heading">All of our projects</h1>
+        <h1 id="heading"><span>All projects</span></h1>
         <ul id="gallery">
-          <li><a href="#"><img src="image/1.jpg"</a></li>
-          <li><a href="#"><img src="image/2.jpg"</a></li>
-          <li><a href="#"><img src="image/3.jpg"</a></li>
-          <li><a href="#"><img src="image/4.jpg"</a></li>
-          <li><a href="#"><img src="image/5.jpg"</a></li>
-          <li><a href="#"><img src="image/6.jpg"</a></li>
-          <li><a href="#"><img src="image/7.jpg"</a></li>
-          <li><a href="#"><img src="image/8.jpg"</a></li>
-          <li><a href="#"><img src="image/9.jpg"</a></li>
-          <li><a href="#"><img src="image/10.jpg"</a></li>
+          <li class="cruisers hidden"><a href="#"><img src="image/1.jpg"</a></li>
+          <li class="cruisers"><a href="#"><img src="image/2.jpg"</a></li>
+          <li class="cruisers"><a href="#"><img src="image/3.jpg"</a></li>
+          <li class="mountain-bikes"><a href="#"><img src="image/4.jpg"</a></li>
+          <li class="cruisers"><a href="#"><img src="image/5.jpg"</a></li>
+          <li class="mountain-bikes"><a href="#"><img src="image/6.jpg"</a></li>
+          <li class="mountain-bikes"><a href="#"><img src="image/8.jpg"</a></li>
+          <li class="mountain-bikes"><a href="#"><img src="image/9.jpg"</a></li>
         </ul>
       </div>
     </section>
+
+    <script type="text/javascript">
+        $("#gallery li").hide();
+    </script>
 
     <footer>
       <div class="container">
@@ -50,7 +54,7 @@
       </div>
     </footer>
 
-    <script src="jquery.js"></script>
+
     <script src="fancybox/dist/jquery.fancybox.min.js"></script>
     <script src="functions.js"></script>
   </body>
